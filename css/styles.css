@@ -1,20 +1,17 @@
-/*==================== GOOGLE FONTS ====================*/
-
+/* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
-/*==================== VARIABLES CSS ====================*/
+/* Variables CSS*/
 :root {
   --header-height: 3rem;
 
-  /*========== Colors ==========*/
-  /* Change favorite color */
-  --hue-color: 201; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
-
-  /* HSL color mode */
-  --first-color: hsl(var(--hue-color), 100%, 36%);
-  --first-color-second: hsl(var(--hue-color), 100%, 36%);
-  --first-color-alt: hsl(var(--hue-color), 57%, 53%);
-  --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+  /* Colors */
+  --hue-color: 201; 
+  /* HSL  */
+  --principal-color: hsl(var(--hue-color), 100%, 36%);
+  --secondary-color: hsl(var(--hue-color), 100%, 36%);
+  --principal-color-alt: hsl(var(--hue-color), 57%, 53%);
+  --principal-color-lighter: hsl(var(--hue-color), 92%, 85%);
   --title-color: hsl(var(--hue-color), 8%, 15%);
   --text-color: hsl(var(--hue-color), 8%, 45%);
   --text-color-light: hsl(var(--hue-color), 8%, 65%);
@@ -22,12 +19,12 @@
   --body-color: hsl(var(--hue-color), 60%, 99%);
   --container-color: #fff;
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
-  --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+  --scroll-alt-color: hsl(var(--hue-color), 12%, 80%);
 
-  /*========== Font and typography ==========*/
+  /* Font */
   --body-font: "Poppins", sans-serif;
 
-  /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+  /* Sizes */
   --big-font-size: 2rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
@@ -36,12 +33,10 @@
   --small-font-size: 0.813rem;
   --smaller-font-size: 0.75rem;
 
-  /*========== Font weight ==========*/
   --font-medium: 500;
   --font-semi-bold: 600;
 
-  /*========== Margenes Bottom ==========*/
-  /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
+  /* Margin size */
   --mb-0-25: 0.25rem;
   --mb-0-5: 0.5rem;
   --mb-0-75: 0.75rem;
@@ -51,7 +46,7 @@
   --mb-2-5: 2.5rem;
   --mb-3: 3rem;
 
-  /*========== z index ==========*/
+  /* z index*/
   --z-tooltip: 10;
   --z-fixed: 100;
   --z-modal: 1000;
@@ -70,21 +65,21 @@
   }
 }
 
-/*========== Variables Dark theme ==========*/
+/* colors for dark theme*/
 
 body.dark-theme {
-  /* HSL color mode */
-  --first-color-second: hsl(var(--hue-color), 30%, 8%);
+  /* HSL */
+  --secondary-color: hsl(var(--hue-color), 30%, 8%);
   --title-color: hsl(var(--hue-color), 8%, 95%);
   --text-color: hsl(var(--hue-color), 8%, 75%);
   --input-color: hsl(var(--hue-color), 29%, 16%);
   --body-color: hsl(var(--hue-color), 28%, 12%);
   --container-color: hsl(var(--hue-color), 29%, 16%);
   --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
-  --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
+  --scroll-alt-color: hsl(var(--hue-color), 12%, 36%);
 }
 
-/*========== Button Dark/Light ==========*/
+/* btn dark mode*/
 
 .nav__btns {
   display: flex;
@@ -99,10 +94,10 @@ body.dark-theme {
 }
 
 .change-theme:hover {
-  color: var(--first-color);
+  color: var(--principal-color);
 }
 
-/*==================== BASE ====================*/
+/* principal code*/
 
 * {
   box-sizing: border-box;
@@ -144,7 +139,7 @@ img {
   box-shadow: 0 0 0.75em 0.01em rgba(0, 0, 0, 0.15);
 }
 
-/*==================== REUSABLE CSS CLASSES ====================*/
+/* principal classes */
 
 .section {
   padding: 2rem 0 4rem;
@@ -165,7 +160,6 @@ img {
   text-align: center;
 }
 
-/*==================== LAYOUT ====================*/
 
 .container {
   max-width: 768px;
@@ -187,11 +181,15 @@ img {
   background-color: var(--body-color);
 }
 
-/*==================== NAV ====================*/
+/* nav */
 
 .nav__logo-img {
   width: 1.5rem;
   margin-right: 0.5em;
+}
+
+.nav__img-close {
+  display: none;
 }
 
 .nav__logo {
@@ -213,7 +211,7 @@ img {
 }
 
 .nav__logo:hover {
-  color: var(--first-color);
+  color: var(--principal-color);
 }
 
 .nav__toggle {
@@ -222,8 +220,10 @@ img {
 }
 
 .nav__toggle:hover {
-  color: var(--first-color);
+  color: var(--principal-color);
 }
+
+/* Nav mobile */
 
 @media screen and (max-width: 768px) {
   .nav__menu {
@@ -238,8 +238,6 @@ img {
     transition: 0.3s;
   }
 }
-
-/* Tamaño del mobile */
 
 .nav__list {
   grid-template-columns: repeat(3, 1fr);
@@ -256,7 +254,7 @@ img {
 }
 
 .nav__link:hover {
-  color: var(--first-color);
+  color: var(--principal-color);
 }
 
 .nav__icon {
@@ -269,11 +267,11 @@ img {
   bottom: 0.5rem;
   font-size: 1.5rem;
   cursor: pointer;
-  color: var(--first-color);
+  color: var(--principal-color);
 }
 
 .nav__close:hover {
-  color: var(--first-color-alt);
+  color: var(--principal-color-alt);
 }
 /* show menu */
 
@@ -284,7 +282,7 @@ img {
 /* Active link */
 
 .active-link {
-  color: var(--first-color);
+  color: var(--principal-color);
 }
 
 /* Change background header */
@@ -293,7 +291,7 @@ img {
   box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
 }
 
-/*==================== HOME ====================*/
+/* Home */
 
 .home__container {
   gap: 1rem;
@@ -315,7 +313,7 @@ img {
 
 .home__social-icon {
   font-size: 1.5rem;
-  color: var(--first-color);
+  color: var(--principal-color);
   transition: 0.3s;
 }
 
@@ -362,11 +360,11 @@ img {
   margin-bottom: var(--mb-2);
 }
 
-/*==================== BUTTONS ====================*/
+/* button class*/
 
 .button {
   display: inline-block;
-  background-color: var(--first-color);
+  background-color: var(--principal-color);
   color: #fff;
   padding: 0.75rem;
   border-radius: 0.5rem;
@@ -374,7 +372,7 @@ img {
 }
 
 .button:hover {
-  background-color: var(--first-color-alt);
+  background-color: var(--principal-color-alt);
 }
 
 .button__icon {
@@ -388,7 +386,7 @@ img {
   align-items: center;
 }
 
-/*==================== ABOUT ====================*/
+/* about */
 
 .about__img {
   width: 200px;
@@ -406,7 +404,7 @@ img {
   display: flex;
   justify-content: center;
 }
-/*==================== SKILLS ====================*/
+/* skills */
 
 .skills__container {
   row-gap: 0;
@@ -422,7 +420,7 @@ img {
 .skills__icon,
 .skills__arrow {
   font-size: 2rem;
-  color: var(--first-color);
+  color: var(--principal-color);
 }
 
 .skills_icon {
@@ -466,15 +464,15 @@ img {
 }
 
 .skills__bar {
-  background-color: var(--first-color-lighter);
+  background-color: var(--principal-color-lighter);
 }
 
 .skills__percentage {
   display: block;
-  background-color: var(--first-color);
+  background-color: var(--principal-color);
 }
 
-/* SKILLS FRONTEND */
+/* Skills frontend */
 
 .skills__html {
   width: 90%;
@@ -499,7 +497,7 @@ img {
   width: 75%;
 }
 
-/* SKILLS DESIGNER */
+/* Skills designer */
 
 .skills__ps {
   width: 80%;
@@ -528,7 +526,7 @@ img {
   transform: rotate(-180deg);
 }
 
-/*==================== knowled ====================*/
+/* knowled */
 
 .knowled__tabs {
   display: flex;
@@ -543,7 +541,7 @@ img {
 }
 
 .knowled__button:hover {
-  color: var(--first-color);
+  color: var(--principal-color);
 }
 
 .knowled__icon {
@@ -581,7 +579,7 @@ img {
   display: inline-block;
   width: 13px;
   height: 13px;
-  background-color: var(--first-color);
+  background-color: var(--principal-color);
   border-radius: 50%;
 }
 
@@ -589,7 +587,7 @@ img {
   display: block;
   width: 1px;
   height: 100%;
-  background-color: var(--first-color);
+  background-color: var(--principal-color);
   transform: translate(6px, -7px);
 }
 
@@ -602,10 +600,10 @@ img {
 }
 
 .knowled__button.knowled__active {
-  color: var(--first-color);
+  color: var(--principal-color);
 }
 
-/*==================== PORTFOLIO ====================*/
+/* portfolio */
 
 .portfolio__container {
   overflow: initial;
@@ -641,7 +639,7 @@ img {
 
 .swiper-portfolio-icon {
   font-size: 2rem;
-  color: var(--first-color);
+  color: var(--principal-color);
 }
 
 .swiper-button-prev {
@@ -657,7 +655,7 @@ img {
 }
 
 .swiper-pagination-bullet-active {
-  background-color: var(--first-color);
+  background-color: var(--principal-color);
 }
 
 .swiper-button-prev,
@@ -666,7 +664,7 @@ img {
   outline: none;
 }
 
-/*==================== CONTACT ME ====================*/
+/* contact */
 
 .contact__container {
   row-gap: 3rem;
@@ -679,7 +677,7 @@ img {
 
 .contact__icon {
   font-size: 2rem;
-  color: var(--first-color);
+  color: var(--principal-color);
   margin-right: var(--mb-0-75);
 }
 
@@ -715,7 +713,7 @@ img {
   padding: 0.25rem 0.5rem 0.5rem 0;
 }
 
-/*==================== FOOTER ====================*/
+/* footer */
 
 .footer {
   padding-top: 2rem;
@@ -726,18 +724,18 @@ img {
 }
 
 .footer__bg {
-  background-color: var(--first-color-second);
+  background-color: var(--secondary-color);
   padding: 2rem 0 3rem 2rem;
 }
 
 .footer__copy {
-  font-size: var(--smaller-font-size);
+  font-size: var(--font-medium);
   text-align: center;
   color: var(--text-color-light);
   margin-top: var(--mb-3);
 }
 
-/*========== SCROLL BAR ==========*/
+/* scrollbar */
 ::-webkit-scrollbar {
   width: 0.6rem;
   background-color: var(--scroll-bar-color);
@@ -745,7 +743,7 @@ img {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--scroll-thumb-color);
+  background-color: var(--scroll-alt-color);
   border-radius: 0.5rem;
 }
 
@@ -753,8 +751,8 @@ img {
   background-color: var(--text-color-light);
 }
 
-/*==================== MEDIA QUERIES ====================*/
-/* For small devices */
+/* RESPONSIVE DESIGN */
+/* small devices */
 
 @media screen and (max-width: 350px) {
   .container {
@@ -777,7 +775,7 @@ img {
   }
 }
 
-/* For medium devices */
+/* medium devices */
 
 @media screen and (min-width: 568px) {
   .home__content {
@@ -813,7 +811,7 @@ img {
   }
 }
 
-/* For large devices */
+/* large devices */
 
 @media screen and (min-width: 768px) {
   .container {
@@ -909,7 +907,7 @@ img {
   }
 }
 
-/* For large devices */
+/* large large devices */
 
 @media screen and (min-width: 1024px) {
   .header,
