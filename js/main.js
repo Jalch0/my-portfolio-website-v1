@@ -142,3 +142,11 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme());
     localStorage.setItem('selected-icon', getCurrentIcon());
 })
+
+/* Contact button */
+
+const contactbtn = document.getElementById("contactbtn");
+
+contactbtn.addEventListener("click", () => {
+    alert("¡Whoops, this still doesn't work!")
+})

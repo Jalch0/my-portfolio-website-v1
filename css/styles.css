@@ -654,6 +654,10 @@ img {
   transform: translateX(0.25rem);
 }
 
+.portfolio__programmer {
+  margin-bottom: 6rem;
+}
+
 .swiper-button-prev::after,
 .swiper-button-next::after {
   content: "";
