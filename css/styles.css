@@ -364,11 +364,13 @@ img {
 
 .button {
   display: inline-block;
-  background-color: var(--principal-color);
+  background-color: transparent;
+  border: 1px solid white;
   color: #fff;
   padding: 0.75rem;
   border-radius: 0.5rem;
   font-weight: var(--font-medium);
+  transition: .5s;
 }
 
 .button:hover {
@@ -470,6 +472,26 @@ img {
 .skills__percentage {
   display: block;
   background-color: var(--principal-color);
+}
+
+.skills__profile {
+  text-align: center;
+}
+
+.skills__profile-plat{
+  transition: .3s;
+}
+
+.platzi{
+  color: rgb(44, 224, 44);
+}
+
+.frontendmentor{
+  color: var(--principal-color);
+}
+
+.skills__profile a:hover {
+  color: white;
 }
 
 /* Skills frontend */
